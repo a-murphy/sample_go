@@ -24,5 +24,6 @@ before_script:
 script:
   - go test -coverprofile=coverage.txt -covermode count ./
   - $GOPATH/bin/gocover-cobertura < coverage.txt > shippable/codecoverage/coverage.xml
+  - exit 0
   
-archive: true
+build_image: shippable/minv2
