@@ -20,6 +20,7 @@ before_install:
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
+  - ls
 
 script:
   - go test -coverprofile=coverage.txt -covermode count ./
