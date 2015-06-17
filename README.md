@@ -5,4 +5,4 @@ Simple Golang app which uses Go's testing library and Ginkgo for test reports an
 
 This sample is built for Shippable, a docker based continuous integration and deployment platform.
 
-[![Build Status](https://apibeta.shippable.com/projects/55562cc1f4e45f525dcecb25/badge)](https://betav3.shippable.com/projects/55562cc1f4e45f525dcecb25/builds/latest)
+[![Build Status](https://api.shippable.com/projects/54d55c4a5ab6cc13528b243c/badge)](https://app.shippable.com/projects/54d55c4a5ab6cc13528b243c/builds/latest)
