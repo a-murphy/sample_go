@@ -8,6 +8,7 @@ go:
 
 env:
   - CI_REPORT=shippable/testresults/junit.xml CI_REPORT_2=shippable/testresults/junit.xml CI_REPORT_3=shippable/testresults/junit.xml CI_REPORT_4=shippable/testresults/junit.xml CI_REPORT_5=shippable/testresults/junit.xml
+  - othervariable
 
 before_install:
   - export GOPATH=$SHIPPABLE_GOPATH
