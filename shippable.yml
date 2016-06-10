@@ -15,14 +15,14 @@ env:
     - env3=3
 
 before_install:
-  - export GOPATH=$SHIPPABLE_GOPATH
-  - source $HOME/.gvm/scripts/gvm
-  - gvm install go$SHIPPABLE_GO_VERSION
-  - gvm use go$SHIPPABLE_GO_VERSION
-  - go get github.com/t-yuki/gocover-cobertura
-  - go get github.com/onsi/gomega
-  - go get github.com/onsi/ginkgo
-  - go get code.google.com/p/go.tools/cmd/cover
+ # - export GOPATH=$SHIPPABLE_GOPATH
+#  - source $HOME/.gvm/scripts/gvm
+#  - gvm install go$SHIPPABLE_GO_VERSION
+#  - gvm use go$SHIPPABLE_GO_VERSION
+#  - go get github.com/t-yuki/gocover-cobertura
+#  - go get github.com/onsi/gomega
+#  - go get github.com/onsi/ginkgo
+#  - go get code.google.com/p/go.tools/cmd/cover
 
 # Make folders for the reports
 before_script:
@@ -30,8 +30,8 @@ before_script:
   - mkdir -p shippable/codecoverage
 
 script:
-  - go test -coverprofile=coverage.txt -covermode count ./
-  - $GOPATH/bin/gocover-cobertura < coverage.txt > shippable/codecoverage/coverage.xml
+#  - go test -coverprofile=coverage.txt -covermode count ./
+#  - $GOPATH/bin/gocover-cobertura < coverage.txt > shippable/codecoverage/coverage.xml
   
   - which sudo
   - docker login
