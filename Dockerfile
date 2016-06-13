@@ -1,2 +1,2 @@
 FROM ubuntu
-RUN apt-get update && apt-get upgrade
+RUN apt-get update && apt-get -y upgrade
