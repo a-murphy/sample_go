@@ -4,6 +4,10 @@ go:
   - 1.1
 
 build:
+    pre_ci_boot:
+      image_name: drydock/u14golall
+      image_tag: prod
+      pull: true
     ci:
       - echo 'true'
     post_ci:
