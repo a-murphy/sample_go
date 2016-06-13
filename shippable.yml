@@ -24,7 +24,6 @@ integrations:
     - integrationName: "AWS"
       type: aws
       target: eb_docker
-      platform: "Docker"
       application_name: "beanstalk_application"
       env_name: "beanstalk-env"
       bucket_name: "elasticbeanstalk-us-west-2-544102397216"
