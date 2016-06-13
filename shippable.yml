@@ -11,9 +11,10 @@ build:
     ci:
       - echo 'true'
     post_ci:
-      - docker build -t amurphy/test:0.0.1 --rm ./
-      - docker tag -f amurphy/test:0.0.1 amurphy/test:latest
-      - docker push amurphy/test:latest
+      #- docker build -t amurphy/test:0.0.1 --rm ./
+      #- docker tag -f amurphy/test:0.0.1 amurphy/test:latest
+      #- docker push amurphy/test:latest
+      - aws s3 sync $SHIPPABLE_BUILD_DIR "s3://573fb3cea987f71a9554335a" --region "us-west-2"
 
 integrations:
   hub:
@@ -23,12 +24,12 @@ integrations:
   deploy:
     - integrationName: "AWS"
       type: aws
-      target: eb_docker
-      application_name: "beanstalk_application"
-      env_name: "beanstalk-env"
-      bucket_name: "elasticbeanstalk-us-west-2-544102397216"
-      region: "us-west-2"
-      image_name: "amurphy/test"
-      image_tag: "latest"
+  #    target: eb_docker
+  #    application_name: "beanstalk_application"
+  #    env_name: "beanstalk-env"
+  #    bucket_name: "elasticbeanstalk-us-west-2-544102397216"
+  #    region: "us-west-2"
+  #    image_name: "amurphy/test"
+  #    image_tag: "latest"
 
 
