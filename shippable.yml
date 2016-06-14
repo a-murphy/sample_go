@@ -5,7 +5,7 @@ go:
 
 build:
     pre_ci_boot:
-      image_name: drydock/u14golall
+      image_name: drydock/u14nod
       image_tag: prod
       pull: true
     ci:
@@ -24,12 +24,11 @@ integrations:
   deploy:
     - integrationName: "AWS"
       type: aws
-  #    target: eb_docker
-  #    application_name: "beanstalk_application"
-  #    env_name: "beanstalk-env"
-  #    bucket_name: "elasticbeanstalk-us-west-2-544102397216"
-  #    region: "us-west-2"
-  #    image_name: "amurphy/test"
-  #    image_tag: "latest"
-
+      target: eb_docker
+      application_name: "beanstalk_application"
+      env_name: "beanstalk-env"
+      bucket_name: "elasticbeanstalk-us-west-2-544102397216"
+      region: "us-west-2"
+      image_name: "amurphy/test"
+      image_tag: "latest"
 
