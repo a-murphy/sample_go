@@ -1,7 +1,7 @@
-language: go
+language: node_js
 
-go:
-  - 1.1
+node_js:
+  - 6.1
 
 build:
     pre_ci_boot:
